@@ -1,0 +1,55 @@
+[[models]]
+name = "omnivoice"
+enabled = true
+method = "text_to_speech"
+cli = "models/omnivoice/cli.py"
+python = "models/omnivoice/.venv/bin/python"
+timeout_seconds = 7200
+
+[[models]]
+name = "stable-audio"
+enabled = true
+method = "generate_music"
+cli = "models/stable-audio/cli.py"
+python = "models/stable-audio/project/.venv/bin/python"
+timeout_seconds = 7200
+
+[[models]]
+name = "rembg"
+enabled = true
+method = "remove_background"
+cli = "models/rembg/cli.py"
+python = "models/rembg/.venv/bin/python"
+timeout_seconds = 1800
+
+[[models]]
+name = "rife"
+enabled = true
+method = "interpolate_video"
+cli = "models/rife/cli.sh"
+python = ""
+timeout_seconds = 7200
+
+[[models]]
+name = "whisperx"
+enabled = true
+method = "transcribe_audio"
+cli = "models/whisperx/cli.py"
+python = "models/whisperx/.venv/bin/python"
+timeout_seconds = 7200
+
+[[models]]
+name = "depth-anything"
+enabled = true
+method = "estimate_depth"
+cli = "models/depth-anything/cli.py"
+python = "models/depth-anything/.venv/bin/python"
+timeout_seconds = 1800
+
+[[models]]
+name = "transnetv2"
+enabled = true
+method = "detect_scenes"
+cli = "models/transnetv2/cli.py"
+python = "models/transnetv2/.venv/bin/python"
+timeout_seconds = 7200

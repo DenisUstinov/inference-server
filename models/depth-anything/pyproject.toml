@@ -1,0 +1,21 @@
+[project]
+name = "depth-anything-model"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.8.0",
+    "transformers",
+    "pillow",
+    "numpy",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv]
+package = false
