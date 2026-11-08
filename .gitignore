@@ -1,5 +1,7 @@
 # Python-generated files
 __pycache__/
+*.pyc
+.venv/
 
 # Environment variables
 .env
@@ -7,3 +9,14 @@ __pycache__/
 # Test coverage
 .coverage
 
+# Model weights
+models/*/weights/
+
+# Job data
+rpc/data/
+
+# Upstream projects
+models/*/project/
+
+# RIFE distribution
+models/rife/bin/

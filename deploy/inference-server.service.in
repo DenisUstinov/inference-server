@@ -1,0 +1,22 @@
+[Unit]
+Description=Inference Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__BASE_DIR__/rpc
+Environment=HF_HUB_OFFLINE=1
+Environment=TRANSFORMERS_OFFLINE=1
+ExecStart=__BASE_DIR__/rpc/.venv/bin/python __BASE_DIR__/rpc/server.py
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=__BASE_DIR__/rpc/data __BASE_DIR__/models/stable-audio/project/optimized/tflite/models/tflite/lora_cache %h
+CapabilityBoundingSet=
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
